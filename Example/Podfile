@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ActivationToggle_Example' do
+  pod 'ActivationToggle', :path => '../'
+
+  target 'ActivationToggle_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
