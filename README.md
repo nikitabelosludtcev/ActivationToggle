@@ -17,6 +17,10 @@ pod 'ActivationToggle'
 
 2.  Run `pod install` from Terminal, then open your app's `.xcworkspace` file to launch Xcode.
 
+### Manual
+
+Drag ActivationToggle.swift file to your project sources.
+
 ## Basic Usage
 
 Import the module.
@@ -50,7 +54,7 @@ Build and run the `ActivationToggle-Example` project in Xcode to see `Activation
 
 ## TODOs
 
-- [] Add swipe gesture handling and animations
+- [ ] Add swipe gesture handling and animations
 
 ## Communication
 
@@ -63,7 +67,7 @@ Build and run the `ActivationToggle-Example` project in Xcode to see `Activation
 Nikita Belosludtcev
 
 - https://github.com/nikitabelosludtcev
-- https://nikitabelosludtcev.github.io/
+- https://nikitabelosludtcev.github.io
 - nbelosludtcev@gmail.com
 
 ## License
