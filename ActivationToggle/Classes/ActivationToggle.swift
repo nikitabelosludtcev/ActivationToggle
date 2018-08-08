@@ -17,7 +17,7 @@ private extension CGPoint {
     static func /(l: CGPoint, r: CGFloat) -> CGPoint { return CGPoint(x: l.x / r, y: l.y / r) }
 }
 
-class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
+private class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
     
     private(set) var isOn = false
     
@@ -113,7 +113,7 @@ class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
     private let convertToggleToMinusAnimationKey = "ConvertToggleToMinus"
     private let convertMinusToCheckmarkAnimationKey = "ConvertMinusToCheckmark"
     
-    func setOn(animated: Bool) {
+    private func setOn(animated: Bool) {
         if isOn { return }
         isOn = true
         removeAllAnimations()
@@ -177,7 +177,7 @@ class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
     private let convertMinusToToggleAnimationKey = "ConvertMinusToToggle"
     private let moveToggleLeftAnimationKey = "MoveToggleLeft"
     
-    func setOff(animated: Bool) {
+    private func setOff(animated: Bool) {
         if !isOn { return }
         isOn = false
         removeAllAnimations()
@@ -267,7 +267,7 @@ class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
     }
 }
 
-class ContainerLayer: CAShapeLayer, CAAnimationDelegate {
+private class ContainerLayer: CAShapeLayer, CAAnimationDelegate {
     
     private(set) var isOn = false
     
@@ -309,7 +309,7 @@ class ContainerLayer: CAShapeLayer, CAAnimationDelegate {
         commonInit()
     }
     
-    func commonInit() {
+    private func commonInit() {
         fillColor = offColor.cgColor
         path = pathExtended()
     }
