@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  ActivationToggle
 //
-//  Created by nikitabelosludtcev on 06/08/2018.
-//  Copyright (c) 2018 nikitabelosludtcev. All rights reserved.
+//  Created by Nikta Belosludtcev on 06/08/2018.
+//  Copyright (c) 2018 Nikta Belosludtcev. All rights reserved.
 //
 
 import UIKit

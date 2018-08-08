@@ -1,0 +1,6 @@
+framework module Pods_ActivationToggle_Example {
+  umbrella header "Pods-ActivationToggle_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

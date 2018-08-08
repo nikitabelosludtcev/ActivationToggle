@@ -1,0 +1,6 @@
+framework module ActivationToggle {
+  umbrella header "ActivationToggle-umbrella.h"
+
+  export *
+  module * { export * }
+}
