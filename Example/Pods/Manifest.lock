@@ -1,16 +1,16 @@
 PODS:
-  - ActivationToggle (0.1.0)
+  - ActivationToggle (0.0.2)
 
 DEPENDENCIES:
   - ActivationToggle (from `../`)
 
 EXTERNAL SOURCES:
   ActivationToggle:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  ActivationToggle: 287dc82d802063d135bc1b7656b2aa552fbc8f26
+  ActivationToggle: 27d8c3bcd8afb15ed04c1d900252ee11e53507da
 
 PODFILE CHECKSUM: cd495a4c4996c16213a3e2d2413cbff0e3416004
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.6.1

@@ -1,4 +1,4 @@
-## ActivationToggle [![Swift 4.1](https://img.shields.io/badge/Swift-4.1-orange.svg?style=flat)](https://developer.apple.com/swift/) [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/ActivationToggle.svg)](https://img.shields.io/cocoapods/v/ActivationToggle.svg)
+## ActivationToggle [![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://developer.apple.com/swift/) [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/ActivationToggle.svg)](https://img.shields.io/cocoapods/v/ActivationToggle.svg)
 
 <p align="center">
 <img src="Example/ActivationToggle/screencast.gif" alt="Sample">

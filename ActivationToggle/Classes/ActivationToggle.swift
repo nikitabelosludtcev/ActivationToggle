@@ -72,8 +72,8 @@ private class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
         path = pathToggle(center: CGPoint(x: bounds.height / 2, y: bounds.height / 2))
         
         isShowSadow = true
-        lineCap = kCALineCapRound
-        lineJoin = kCALineJoinRound
+        lineCap = CAShapeLayerLineCap.round
+        lineJoin = CAShapeLayerLineJoin.round
         lineWidth = 2
     }
     
@@ -133,9 +133,9 @@ private class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
         let moveAnimation = CABasicAnimation(keyPath: "path")
         moveAnimation.fromValue = pathToggle(center: CGPoint(x: bounds.height / 2, y: bounds.height / 2))
         moveAnimation.toValue = pathToggle(center: CGPoint(x: bounds.width - bounds.height / 2, y: bounds.height / 2))
-        moveAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        moveAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         moveAnimation.duration = activateAnimationDuration
-        moveAnimation.fillMode = kCAFillModeForwards
+        moveAnimation.fillMode = CAMediaTimingFillMode.forwards
         moveAnimation.isRemovedOnCompletion = false
         moveAnimation.delegate = self
         add(moveAnimation, forKey: moveToggleRightAnimationKey)
@@ -148,9 +148,9 @@ private class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
         let convertAnimation = CABasicAnimation(keyPath: "path")
         convertAnimation.fromValue = pathToggle(center: center)
         convertAnimation.toValue = pathMinus(center: center)
-        convertAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        convertAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
         convertAnimation.duration = activateAnimationDuration * 0.7
-        convertAnimation.fillMode = kCAFillModeForwards
+        convertAnimation.fillMode = CAMediaTimingFillMode.forwards
         convertAnimation.isRemovedOnCompletion = false
         convertAnimation.delegate = self
         add(convertAnimation, forKey: convertToggleToMinusAnimationKey)
@@ -164,8 +164,8 @@ private class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
         convertAnimation.fromValue = pathSeparatedMinus(center: center)
         convertAnimation.toValue = pathCheckmark(center: center)
         convertAnimation.duration = activateAnimationDuration * 0.7
-        convertAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        convertAnimation.fillMode = kCAFillModeForwards
+        convertAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        convertAnimation.fillMode = CAMediaTimingFillMode.forwards
         convertAnimation.isRemovedOnCompletion = false
         convertAnimation.delegate = self
         add(convertAnimation, forKey: convertMinusToCheckmarkAnimationKey)
@@ -199,7 +199,7 @@ private class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
         convertAnimation.fromValue = pathCheckmark(center: center)
         convertAnimation.toValue = pathSeparatedMinus(center: center)
         convertAnimation.duration = deactivateAnimationDuration * 0.3
-        convertAnimation.fillMode = kCAFillModeForwards
+        convertAnimation.fillMode = CAMediaTimingFillMode.forwards
         convertAnimation.isRemovedOnCompletion = false
         convertAnimation.delegate = self
         add(convertAnimation, forKey: convertCheckmarkToMinusAnimationKey)
@@ -213,7 +213,7 @@ private class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
         convertAnimation.fromValue = pathMinus(center: center)
         convertAnimation.toValue = pathToggle(center: center)
         convertAnimation.duration = deactivateAnimationDuration * 0.2
-        convertAnimation.fillMode = kCAFillModeForwards
+        convertAnimation.fillMode = CAMediaTimingFillMode.forwards
         convertAnimation.isRemovedOnCompletion = false
         convertAnimation.delegate = self
         add(convertAnimation, forKey: convertMinusToToggleAnimationKey)
@@ -226,7 +226,7 @@ private class ToggleLayer: CAShapeLayer, CAAnimationDelegate {
         moveAnimation.fromValue = pathToggle(center: CGPoint(x: bounds.width - bounds.height / 2, y: bounds.height / 2))
         moveAnimation.toValue = pathToggle(center: CGPoint(x: bounds.height / 2, y: bounds.height / 2))
         moveAnimation.duration = deactivateAnimationDuration * 0.5
-        moveAnimation.fillMode = kCAFillModeForwards
+        moveAnimation.fillMode = CAMediaTimingFillMode.forwards
         moveAnimation.isRemovedOnCompletion = false
         moveAnimation.delegate = self
         add(moveAnimation, forKey: moveToggleLeftAnimationKey)
@@ -366,10 +366,10 @@ private class ContainerLayer: CAShapeLayer, CAAnimationDelegate {
         collapseAnimation.fromValue = pathExtended
         collapseAnimation.toValue = pathCollapsed
         collapseAnimation.duration = activateAnimationDuration
-        collapseAnimation.fillMode = kCAFillModeForwards
+        collapseAnimation.fillMode = CAMediaTimingFillMode.forwards
         collapseAnimation.isRemovedOnCompletion = false
         collapseAnimation.delegate = self
-        collapseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        collapseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         add(collapseAnimation, forKey: collapseAnimationKey)
         
         fillColor = onColor.cgColor
@@ -377,7 +377,7 @@ private class ContainerLayer: CAShapeLayer, CAAnimationDelegate {
         colorAnimation.fromValue = offColor.cgColor
         colorAnimation.toValue = onColor.cgColor
         colorAnimation.duration = activateAnimationDuration
-        colorAnimation.fillMode = kCAFillModeForwards
+        colorAnimation.fillMode = CAMediaTimingFillMode.forwards
         colorAnimation.isRemovedOnCompletion = false
         colorAnimation.delegate = self
         add(colorAnimation, forKey: setEnabledColorAnimationKey)
@@ -394,7 +394,7 @@ private class ContainerLayer: CAShapeLayer, CAAnimationDelegate {
         collapseAnimation.fromValue = pathCollapsed()
         collapseAnimation.toValue = pathExtended()
         collapseAnimation.duration = deactivateAnimationDuration
-        collapseAnimation.fillMode = kCAFillModeForwards
+        collapseAnimation.fillMode = CAMediaTimingFillMode.forwards
         collapseAnimation.isRemovedOnCompletion = false
         collapseAnimation.delegate = self
         add(collapseAnimation, forKey: extendAnimationKey)
@@ -404,7 +404,7 @@ private class ContainerLayer: CAShapeLayer, CAAnimationDelegate {
         colorAnimation.fromValue = onColor.cgColor
         colorAnimation.toValue = offColor.cgColor
         colorAnimation.duration = deactivateAnimationDuration
-        colorAnimation.fillMode = kCAFillModeForwards
+        colorAnimation.fillMode = CAMediaTimingFillMode.forwards
         colorAnimation.isRemovedOnCompletion = false
         colorAnimation.delegate = self
         add(colorAnimation, forKey: setDisabledColorAnimationKey)
